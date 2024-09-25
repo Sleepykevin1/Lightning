@@ -1,9 +1,9 @@
-int startX = 0;
+int startX = ((int)(Math.random()*500));
 int startY = 0;
 void setup(){
   size(500,500);
   background(61, 63, 110);
-  strokeWeight(0);
+  strokeWeight(1);
 }
 
 void draw(){
@@ -24,16 +24,14 @@ void draw(){
   //lightning
   fill(238, 245, 37);
 
-  ellipse((200+startX)-startY, startY, 15,15);
+  ellipse((startX)-startY, startY, 15,15);
   startY+=((int)(Math.random()*6)+1);
   startX+=((int)(Math.random()*6)+1);
     
 }
 
 void mousePressed(){
-  startX = 0;
+  startX = ((int)(Math.random()*500));
   startY = 0;
 }
-
-
 
